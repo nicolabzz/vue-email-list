@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font-awesone -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">    
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    
+
+    <title>Vue Email List</title>
+
+</head>
+<body>
+
+
+    <div id="app" class="container">
+
+        <button @click="createEmail()">PRESS FOR RANDOM GENERATOR</button>
+        
+        <div v-for="item in arrayEmail">
+            <ul>
+                <li>{{ item }}</li>
+            </ul>
+            
+        </div>
+
+    </div>
+    
+
+    <!-- NEW WAY DEBUG -->
+    <!-- <div class="container" id="app">
+
+        <h1 class="text_center">Lista email Random</h1>
+
+       <div class="row">
+
+           <ul v-if="arrayEmail.length === 10">
+
+               <li v-for="(item) in arrayEmail">{{item}}</li>
+
+           </ul>
+       </div>
+   </div> -->
+
+
+
+   <!-- Axios  -->
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <!-- js -->
+    <script src="js/script.js"></script>
+</body>
+</html>
